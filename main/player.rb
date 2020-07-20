@@ -1,5 +1,6 @@
 class Player (name)
   attr_accessor :name, :hp, :my_turn
+  @@current_player = nil
   def initialize(name)
     @name = name
     @hp = 3

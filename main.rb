@@ -1,25 +1,15 @@
 require "./main/player"
 require "./main/numbers"
 require "./main/turns"
+require "./main/game"
 
-player1 = Player.new("player1")
+
+player1 = Player.new("Player 1")
 p player1.name
+p player1.hp
 
-player2 = Player.new("player2")
+player2 = Player.new("Player 2")
 p player2.name
+p player2.hp
 
-numbers = Numbers.new
-p numbers.number1
-p numbers.number2
-p numbers.answer
-
-p player1.my_turn
-p player2.my_turn
-
-change_turn(player1, player2)
-p player1.my_turn
-p player2.my_turn
-
-change_turn(player1, player2)
-p player1.my_turn
-p player2.my_turn
+Game.new(player1, player2)
