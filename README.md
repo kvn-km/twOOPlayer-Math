@@ -8,18 +8,20 @@ Create a 2-Player math game where players take turns to answer simple math addit
 
 ## PLANNING
 
+Below is initial thoughts and plans for the game. Can change during development as this is just the beginning.
+
 ### 1. NOUNS
 
 #### _2 PLAYERS_
 
 **Player 1**
 
-- my_turn? true : false
+- my_turn true : false
 - hp = 3
 
 **Player 2**
 
-- my_turn? true : false
+- my_turn true : false
 - hp = 3
 
 #### _TURNS_
@@ -66,7 +68,7 @@ def initialization
   @id = players
   @name = "player#{@id}"
   @hp = 3
-  @my_turn? = false
+  @my_turn = false
 end
 ```
 
@@ -74,13 +76,13 @@ end
 
 ```
 def change_turn
-  if player1.my_turn?
-    player1.my_turn? = false
-    player2.my_turn? = true
+  if player1.my_turn
+    player1.my_turn = false
+    player2.my_turn = true
     current_player = player2
   else
-    player2.my_turn? = false
-    player1.my_turn? = true
+    player2.my_turn = false
+    player1.my_turn = true
     current_player = player1
   end
 end
